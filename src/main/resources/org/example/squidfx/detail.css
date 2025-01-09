@@ -1,0 +1,19 @@
+.frame{
+    -fx-border-color: #ffffff;
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(161, 161, 161, 0.3), 10, 0.5, 0, 0);
+}
+.rent{
+    -fx-text-fill: #fff;
+    -fx-background-color: #4766ff;
+    -fx-border: none;
+    -fx-background-radius: 20px;
+}
+.rent:hover {
+    -fx-background-color: #3a4dbf;
+}
+.rent:pressed {
+    -fx-background-color: #2e3b99;
+}
