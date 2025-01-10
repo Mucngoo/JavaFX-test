@@ -21,7 +21,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.squidfx.DashboardController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.squidfx.ManagerController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -49,7 +49,7 @@
                         </Text>
                         <Line endX="100.0" layoutX="131.0" layoutY="190.0" startX="-100.0" stroke="WHITE" />
                         <Button layoutX="14.0" layoutY="640.0" mnemonicParsing="false" styleClass="box" stylesheets="@tenant.css" text="Log out" />
-                        <Button fx:id="profileNav" layoutX="7.0" layoutY="527.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Profile" textFill="WHITE">
+                        <Button fx:id="profileNav" layoutX="7.0" layoutY="527.0" mnemonicParsing="false" onAction="#switchSceneManager" styleClass="nav-btn" stylesheets="@tenant.css" text=" Profile" textFill="WHITE">
                            <graphic>
                               <FontAwesomeIconView fill="WHITE" glyphName="USER" size="18" />
                            </graphic>
@@ -57,7 +57,7 @@
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="propertyNav" layoutX="5.0" layoutY="228.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-selected" stylesheets="@tenant.css" text=" Manage properties" textFill="WHITE">
+                        <Button fx:id="propertyNav" layoutX="5.0" layoutY="228.0" mnemonicParsing="false" onAction="#switchSceneManager" styleClass="nav-selected" stylesheets="@tenant.css" text=" Manage properties" textFill="WHITE">
                            <graphic>
                               <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="18" />
                            </graphic>
@@ -65,7 +65,7 @@
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="rentalAgreementNav" layoutX="5.0" layoutY="427.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage rental agreement" textFill="WHITE">
+                        <Button fx:id="rentalAgreementNav" layoutX="5.0" layoutY="427.0" mnemonicParsing="false" onAction="#switchSceneManager" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage rental agreement" textFill="WHITE">
                            <graphic>
                               <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="18" />
                            </graphic>
@@ -73,7 +73,7 @@
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="profitNav" layoutX="5.0" layoutY="477.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Data &amp; Revenue" textFill="WHITE">
+                        <Button fx:id="profitNav" layoutX="5.0" layoutY="477.0" mnemonicParsing="false" onAction="#switchSceneManager" styleClass="nav-btn" stylesheets="@tenant.css" text=" Data &amp; Revenue" textFill="WHITE">
                            <graphic>
                               <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="18" />
                            </graphic>
@@ -81,7 +81,7 @@
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="profileNav1" layoutX="7.0" layoutY="280.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage tenants" textFill="WHITE">
+                        <Button fx:id="tenantNav" layoutX="7.0" layoutY="280.0" mnemonicParsing="false" onAction="#switchSceneManager" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage tenants" textFill="WHITE">
                            <graphic>
                               <FontAwesomeIconView fill="WHITE" glyphName="USER" size="18" />
                            </graphic>
@@ -89,7 +89,7 @@
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="profileNav11" layoutX="7.0" layoutY="329.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage hosts" textFill="WHITE">
+                        <Button fx:id="hostNav" layoutX="7.0" layoutY="329.0" mnemonicParsing="false" onAction="#switchSceneManager" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage hosts" textFill="WHITE">
                            <graphic>
                               <FontAwesomeIconView fill="WHITE" glyphName="USER" size="18" />
                            </graphic>
@@ -97,7 +97,7 @@
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Button fx:id="profileNav111" layoutX="7.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage owners" textFill="WHITE">
+                        <Button fx:id="ownerNav" layoutX="7.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchSceneManager" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage owners" textFill="WHITE">
                            <graphic>
                               <FontAwesomeIconView fill="WHITE" glyphName="USER" size="18" />
                            </graphic>
@@ -111,7 +111,7 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane fx:id="viewProperty1" layoutX="3.0" layoutY="7.0" prefHeight="681.6" prefWidth="938.0">
+                        <AnchorPane fx:id="manageProperty" layoutX="3.0" layoutY="7.0" prefHeight="681.6" prefWidth="938.0">
                            <children>
                               <AnchorPane fx:id="paneAll" layoutX="9.0" layoutY="9.0" prefHeight="228.0" prefWidth="920.0" styleClass="box" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css">
                                  <children>
@@ -260,7 +260,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="309.0" layoutY="138.0" prefHeight="688.8" prefWidth="941.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="manageTenant" layoutX="309.0" layoutY="138.0" prefHeight="688.8" prefWidth="941.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="11.0" layoutY="13.0" prefHeight="126.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
                                  <children>
@@ -288,7 +288,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="197.0" layoutY="122.0" prefHeight="688.8" prefWidth="941.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="manageHost" layoutX="197.0" layoutY="122.0" prefHeight="688.8" prefWidth="941.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="9.0" layoutY="9.0" prefHeight="126.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
                                  <children>
@@ -316,7 +316,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="103.0" layoutY="99.0" prefHeight="688.8" prefWidth="941.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="manageOwner" layoutX="103.0" layoutY="99.0" prefHeight="688.8" prefWidth="941.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="9.0" layoutY="9.0" prefHeight="126.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
                                  <children>
@@ -344,7 +344,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="viewRentalAgreement" layoutX="285.0" layoutY="176.0" prefHeight="681.6" prefWidth="937.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="manageRentalAgreement" layoutX="285.0" layoutY="176.0" prefHeight="681.6" prefWidth="937.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="228.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
                                  <children>

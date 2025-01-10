@@ -35,6 +35,21 @@ public class DashboardController implements Initializable {
     @FXML
     private Button profileNav;
 
+    @FXML
+    private AnchorPane manageProperty;
+
+    @FXML
+    private AnchorPane manageTenant;
+
+    @FXML
+    private AnchorPane manageHost;
+
+    @FXML
+    private AnchorPane manageOwner;
+
+    @FXML
+    private AnchorPane manageRentalAgreement;
+
     public void switchSceneTenant (ActionEvent event) {
         if (event.getSource() == propertyNav) {
             viewProperty.setVisible(true);
