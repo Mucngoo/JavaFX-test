@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.squidfx.DashboardController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="429.0" layoutY="289.0" prefHeight="720.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="38.0" prefWidth="1183.0" styleClass="top" stylesheets="@tenant.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <FontAwesomeIconView glyphName="HOME" layoutX="14.0" layoutY="28.0" size="25" text="" />
+                        <Text layoutX="43.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="House Rental Management System">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="670.0" prefWidth="257.0" styleClass="nav" stylesheets="@tenant.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="99.0" layoutY="132.0" size="90" text="" />
+                        <Text fill="WHITE" layoutX="1.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager" textAlignment="CENTER" wrappingWidth="260.5319519042969">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Line endX="100.0" layoutX="131.0" layoutY="190.0" startX="-100.0" stroke="WHITE" />
+                        <Button layoutX="14.0" layoutY="640.0" mnemonicParsing="false" styleClass="box" stylesheets="@tenant.css" text="Log out" />
+                        <Button fx:id="profileNav" layoutX="7.0" layoutY="527.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Profile" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" size="18" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="propertyNav" layoutX="5.0" layoutY="228.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-selected" stylesheets="@tenant.css" text=" Manage properties" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="18" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="rentalAgreementNav" layoutX="5.0" layoutY="427.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage rental agreement" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="18" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="profitNav" layoutX="5.0" layoutY="477.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Data &amp; Revenue" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="18" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="profileNav1" layoutX="7.0" layoutY="280.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage tenants" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" size="18" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="profileNav11" layoutX="7.0" layoutY="329.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage hosts" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" size="18" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="profileNav111" layoutX="7.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchSceneHost" styleClass="nav-btn" stylesheets="@tenant.css" text=" Manage owners" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" size="18" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="viewProperty1" layoutX="3.0" layoutY="7.0" prefHeight="681.6" prefWidth="938.0">
+                           <children>
+                              <AnchorPane fx:id="paneAll" layoutX="9.0" layoutY="9.0" prefHeight="228.0" prefWidth="920.0" styleClass="box" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css">
+                                 <children>
+                                    <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Categories">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="17.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search address">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="16.0" layoutY="144.0" prefHeight="35.0" prefWidth="427.0" />
+                                    <FontAwesomeIconView glyphName="SEARCH" layoutX="417.0" layoutY="168.0" size="18" />
+                                    <Text layoutX="529.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Price">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="529.0" layoutY="52.0" prefHeight="30.0" prefWidth="97.0" promptText="Min" />
+                                    <TextField layoutX="661.0" layoutY="52.0" prefHeight="30.0" prefWidth="97.0" promptText="Max" />
+                                    <Line endX="79.5999755859375" endY="7.62939453125E-6" layoutX="569.0" layoutY="67.0" startX="67.5999755859375" startY="7.62939453125E-6" />
+                                    <Button layoutX="688.0" layoutY="155.0" mnemonicParsing="false" styleClass="delete" stylesheets="@tenant.css" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="paneResidential" layoutX="10.0" layoutY="10.0" prefHeight="228.0" prefWidth="920.0" styleClass="box" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css" visible="false">
+                                 <children>
+                                    <TextField layoutX="16.0" layoutY="160.0" prefHeight="47.0" prefWidth="227.0" promptText="e.g. 3" styleClass="input" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Categories">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="497.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Price">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="501.0" layoutY="53.0" prefHeight="30.0" prefWidth="97.0" promptText="Min" />
+                                    <TextField layoutX="637.0" layoutY="54.0" prefHeight="30.0" prefWidth="97.0" promptText="Max" />
+                                    <Line endX="79.5999755859375" endY="7.62939453125E-6" layoutX="543.0" layoutY="69.0" startX="67.5999755859375" startY="7.62939453125E-6" />
+                                    <Text layoutX="14.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of bedrooms">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="306.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Garden Availability">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <CheckBox layoutX="306.0" layoutY="173.0" mnemonicParsing="false" text="Yes">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox layoutX="396.0" layoutY="173.0" mnemonicParsing="false" text="No">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <Text layoutX="578.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pet-friendliness">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <CheckBox layoutX="578.0" layoutY="173.0" mnemonicParsing="false" text="Yes">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox layoutX="660.0" layoutY="173.0" mnemonicParsing="false" text="No">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <Button layoutX="788.0" layoutY="168.0" mnemonicParsing="false" styleClass="delete" stylesheets="@tenant.css" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="paneCommercial" layoutX="9.0" layoutY="9.0" prefHeight="228.0" prefWidth="920.0" styleClass="box" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css" visible="false">
+                                 <children>
+                                    <TextField layoutX="16.0" layoutY="160.0" prefHeight="47.0" prefWidth="227.0" promptText="e ko biet :(" styleClass="input" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Categories">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="497.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Price">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="501.0" layoutY="53.0" prefHeight="30.0" prefWidth="97.0" promptText="Min" />
+                                    <TextField layoutX="637.0" layoutY="54.0" prefHeight="30.0" prefWidth="97.0" promptText="Max" />
+                                    <Line endX="79.5999755859375" endY="7.62939453125E-6" layoutX="543.0" layoutY="69.0" startX="67.5999755859375" startY="7.62939453125E-6" />
+                                    <Text layoutX="14.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Business type">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="284.0" layoutY="160.0" prefHeight="47.0" prefWidth="227.0" promptText="e.g. 3" styleClass="input" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="282.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of parking spaces">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="552.0" layoutY="160.0" prefHeight="47.0" prefWidth="227.0" promptText="e.g. 30m^2" styleClass="input" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="550.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Square footage">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Button layoutX="806.0" layoutY="168.0" mnemonicParsing="false" styleClass="delete" stylesheets="@tenant.css" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                              <ComboBox fx:id="comboCat3" layoutX="25.0" layoutY="55.0" onAction="#changeFilterForPropertyCat3" prefHeight="47.0" prefWidth="326.0" styleClass="bento" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css" />
+                              <AnchorPane layoutX="9.0" layoutY="247.0" prefHeight="423.0" prefWidth="920.0" styleClass="box" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css">
+                                 <children>
+                                    <TableView layoutX="10.0" layoutY="9.0" prefHeight="406.0" prefWidth="902.0" stylesheets="@../../../../../../../further-programming-assignment-2-build-a-backend-java-is-life/HouseManagement/src/main/resources/vn/edu/rmit/housemanagement/tenant.css">
+                                       <columns>
+                                          <TableColumn prefWidth="112.79999351501465" text="No." />
+                                          <TableColumn prefWidth="150.4000244140625" text="Property Type" />
+                                          <TableColumn prefWidth="344.7999572753906" text="Address" />
+                                          <TableColumn prefWidth="133.60003662109375" text="Price" />
+                                          <TableColumn prefWidth="161.5999755859375" text="Status" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="309.0" layoutY="138.0" prefHeight="688.8" prefWidth="941.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="11.0" layoutY="13.0" prefHeight="126.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
+                                 <children>
+                                    <Text layoutX="29.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Tenant name">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="29.0" layoutY="56.0" prefHeight="35.0" prefWidth="427.0" />
+                                    <FontAwesomeIconView glyphName="SEARCH" layoutX="425.0" layoutY="80.0" size="18" />
+                                    <Button layoutX="818.0" layoutY="67.0" mnemonicParsing="false" styleClass="delete" stylesheets="@tenant.css" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="11.0" layoutY="146.0" prefHeight="529.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
+                                 <children>
+                                    <TableView layoutX="10.0" layoutY="9.0" prefHeight="512.0" prefWidth="902.0" stylesheets="@tenant.css">
+                                       <columns>
+                                          <TableColumn prefWidth="126.39999961853027" text="No." />
+                                          <TableColumn prefWidth="280.79998779296875" text="Full Name" />
+                                          <TableColumn prefWidth="204.79989624023438" text="Date of Birth" />
+                                          <TableColumn prefWidth="280.800048828125" text="Contact info" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="197.0" layoutY="122.0" prefHeight="688.8" prefWidth="941.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="9.0" layoutY="9.0" prefHeight="126.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
+                                 <children>
+                                    <Text layoutX="29.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Host name">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="29.0" layoutY="56.0" prefHeight="35.0" prefWidth="427.0" />
+                                    <FontAwesomeIconView glyphName="SEARCH" layoutX="425.0" layoutY="80.0" size="18" />
+                                    <Button layoutX="818.0" layoutY="67.0" mnemonicParsing="false" styleClass="delete" stylesheets="@tenant.css" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="9.0" layoutY="146.0" prefHeight="529.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
+                                 <children>
+                                    <TableView layoutX="9.0" layoutY="9.0" prefHeight="512.0" prefWidth="902.0" stylesheets="@tenant.css">
+                                       <columns>
+                                          <TableColumn prefWidth="126.39999961853027" text="No." />
+                                          <TableColumn prefWidth="280.79998779296875" text="Full Name" />
+                                          <TableColumn prefWidth="204.79989624023438" text="Date of Birth" />
+                                          <TableColumn prefWidth="280.800048828125" text="Contact info" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="103.0" layoutY="99.0" prefHeight="688.8" prefWidth="941.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="9.0" layoutY="9.0" prefHeight="126.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
+                                 <children>
+                                    <Text layoutX="29.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Owner name">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="29.0" layoutY="56.0" prefHeight="35.0" prefWidth="427.0" />
+                                    <FontAwesomeIconView glyphName="SEARCH" layoutX="425.0" layoutY="80.0" size="18" />
+                                    <Button layoutX="818.0" layoutY="67.0" mnemonicParsing="false" styleClass="delete" stylesheets="@tenant.css" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="9.0" layoutY="148.0" prefHeight="529.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
+                                 <children>
+                                    <TableView layoutX="9.0" layoutY="9.0" prefHeight="512.0" prefWidth="902.0" stylesheets="@tenant.css">
+                                       <columns>
+                                          <TableColumn prefWidth="126.39999961853027" text="No." />
+                                          <TableColumn prefWidth="280.79998779296875" text="Full Name" />
+                                          <TableColumn prefWidth="204.79989624023438" text="Date of Birth" />
+                                          <TableColumn prefWidth="280.800048828125" text="Contact info" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="viewRentalAgreement" layoutX="285.0" layoutY="176.0" prefHeight="681.6" prefWidth="937.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="228.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
+                                 <children>
+                                    <Text layoutX="29.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Categories">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="29.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Status">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="494.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox layoutX="29.0" layoutY="51.0" prefHeight="46.0" prefWidth="295.0" styleClass="bento" stylesheets="@tenant.css" />
+                                    <ComboBox layoutX="29.0" layoutY="150.0" prefHeight="46.0" prefWidth="295.0" styleClass="bento" stylesheets="@tenant.css" />
+                                    <ComboBox layoutX="494.0" layoutY="51.0" prefHeight="46.0" prefWidth="295.0" styleClass="bento" stylesheets="@tenant.css" />
+                                    <Button layoutX="718.0" layoutY="158.0" mnemonicParsing="false" styleClass="delete" stylesheets="@tenant.css" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="9.0" layoutY="247.0" prefHeight="423.0" prefWidth="920.0" styleClass="box" stylesheets="@squid.css">
+                                 <children>
+                                    <TableView layoutX="10.0" layoutY="9.0" prefHeight="406.0" prefWidth="902.0" stylesheets="@tenant.css">
+                                       <columns>
+                                          <TableColumn prefWidth="50.39999198913574" text="No." />
+                                          <TableColumn prefWidth="92.79999542236328" text="Tenants" />
+                                          <TableColumn text="Owners" />
+                                          <TableColumn prefWidth="85.60000610351562" text="Hosts" />
+                                          <TableColumn prefWidth="92.79998779296875" text="Property" />
+                                          <TableColumn prefWidth="91.19998168945312" text="Period" />
+                                          <TableColumn prefWidth="124.0" text="Contract Date" />
+                                          <TableColumn prefWidth="78.39996337890625" text="Fee" />
+                                          <TableColumn prefWidth="104.00006103515625" text="Status" />
+                                          <TableColumn prefWidth="88.7999267578125" text="Payment" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="viewProfit" layoutX="180.0" layoutY="134.0" prefHeight="681.6" prefWidth="940.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="92.0" prefWidth="291.0" styleClass="box" stylesheets="@tenant.css">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="HOME" layoutX="10.0" layoutY="30.0" size="25" />
+                                    <Text layoutX="40.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Properties">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="40.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="90.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="properties">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="3.0" layoutY="209.0" prefHeight="474.0" prefWidth="497.0" styleClass="box" stylesheets="@tenant.css">
+                                 <children>
+                                    <LineChart layoutX="3.0" layoutY="3.0" prefHeight="467.0" prefWidth="490.0" title="Profits Data Chart">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="633.0" layoutY="10.0" prefHeight="92.0" prefWidth="291.0" styleClass="box" stylesheets="@tenant.css">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="MONEY" layoutX="10.0" layoutY="30.0" size="25" />
+                                    <Text layoutX="47.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Profits">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="40.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$3636.00">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Button layoutX="174.0" layoutY="53.0" mnemonicParsing="false" styleClass="increase" stylesheets="@tenant.css" text="^  5.6%" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="325.0" layoutY="10.0" prefHeight="92.0" prefWidth="291.0" styleClass="box" stylesheets="@tenant.css">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="HOME" layoutX="10.0" layoutY="30.0" size="25" />
+                                    <Text layoutX="40.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Rental Agreements">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="40.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="90.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="rental agreements">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="507.0" layoutY="209.0" prefHeight="474.0" prefWidth="427.0" styleClass="box" stylesheets="@tenant.css">
+                                 <children>
+                                    <BarChart layoutX="2.0" layoutY="2.0" prefHeight="470.0" prefWidth="424.0" title="Most rented properties">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                    </BarChart>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="110.0" prefHeight="92.0" prefWidth="291.0" styleClass="box" stylesheets="@tenant.css">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="USER" layoutX="10.0" layoutY="30.0" size="23" />
+                                    <Text layoutX="40.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Tenants">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="40.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="90.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tenants">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="633.0" layoutY="110.0" prefHeight="92.0" prefWidth="291.0" styleClass="box" stylesheets="@tenant.css">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="USER" layoutX="10.0" layoutY="30.0" size="23" />
+                                    <Text layoutX="47.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Owners">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="40.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="90.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hosts">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="325.0" layoutY="110.0" prefHeight="92.0" prefWidth="291.0" styleClass="box" stylesheets="@tenant.css">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="USER" layoutX="10.0" layoutY="30.0" size="23" />
+                                    <Text layoutX="40.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Hosts">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="40.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="90.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hosts">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="userProfile" layoutX="402.0" layoutY="187.0" prefHeight="681.6" prefWidth="937.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="272.0" fitWidth="940.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../../../../../../../../Pictures/hero-image.jpg" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane layoutX="304.0" layoutY="139.0" prefHeight="422.0" prefWidth="608.0" styleClass="box" stylesheets="@tenant.css">
+                                 <children>
+                                    <TextField layoutX="20.0" layoutY="50.0" prefHeight="47.0" prefWidth="280.0" styleClass="input" stylesheets="@tenant.css" text="Squid">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="20.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="314.0" layoutY="50.0" prefHeight="47.0" prefWidth="280.0" styleClass="input" stylesheets="@tenant.css" text="aPhuongCute@gmail.com">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="314.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email address">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField layoutX="20.0" layoutY="160.0" prefHeight="47.0" prefWidth="280.0" styleClass="input" stylesheets="@tenant.css" text="098877623">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Text layoutX="20.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <DatePicker layoutX="314.0" layoutY="160.0" prefHeight="47.0" prefWidth="280.0" promptText="DOB" styleClass="date-picker" stylesheets="@tenant.css" />
+                                    <Text layoutX="314.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Button layoutX="18.0" layoutY="299.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="572.0" styleClass="update-profile" stylesheets="@tenant.css" text="Update">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="39.0" layoutY="139.0" prefHeight="422.0" prefWidth="247.0" styleClass="box" stylesheets="@tenant.css">
+                                 <children>
+                                    <FontAwesomeIconView fill="#4b4b4b" glyphName="USER" layoutX="91.0" layoutY="119.0" size="90" text="" />
+                                    <Text layoutX="106.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Squid">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#8c8c8c" layoutX="54.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="aPhuongCute@gmail.com" />
+                                    <Line endX="124.20004272460938" endY="6.103515625E-5" layoutX="111.0" layoutY="211.0" startX="-93.60001373291016" startY="9.1552734375E-5" stroke="#8c8c8c" />
+                                    <Line endX="124.20004272460938" endY="6.103515625E-5" layoutX="111.0" layoutY="254.0" startX="-93.60001373291016" startY="9.1552734375E-5" stroke="#8c8c8c" />
+                                    <Line endX="124.20004272460938" endY="6.103515625E-5" layoutX="111.0" layoutY="294.0" startX="-93.60001373291016" startY="9.1552734375E-5" stroke="#8c8c8c" />
+                                    <Line endX="124.20004272460938" endY="6.103515625E-5" layoutX="111.0" layoutY="337.0" startX="-93.60001373291016" startY="9.1552734375E-5" stroke="#8c8c8c" />
+                                    <Text layoutX="17.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Num of Rental">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="18.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paid">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="17.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unpaid">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#23ff1f" layoutX="224.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#ff3838" layoutX="224.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="221.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
