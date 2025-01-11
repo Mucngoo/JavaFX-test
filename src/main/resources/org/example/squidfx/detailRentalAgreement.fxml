@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -17,10 +17,6 @@
                      <children>
                         <AnchorPane layoutX="-26.0" layoutY="-60.0" prefHeight="66.0" prefWidth="824.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Button layoutX="490.0" layoutY="25.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="151.0" styleClass="rent" stylesheets="@detail.css" text="Generate Recipe">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font></Button>
                               <Text layoutX="55.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rental Agreement">
                                  <font>
                                     <Font size="29.0" />
@@ -34,116 +30,92 @@
                <center>
                   <AnchorPane prefHeight="436.0" prefWidth="700.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane layoutX="57.0" layoutY="14.0" prefHeight="76.0" prefWidth="586.0" styleClass="frame" stylesheets="@detail.css">
+                        <AnchorPane layoutX="57.0" layoutY="14.0" prefHeight="342.0" prefWidth="586.0" styleClass="frame" stylesheets="@detail.css">
                            <children>
                               <Text layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property Address">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Text>
-                              <Text fill="#404040" layoutX="9.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+                              <Text fill="#404040" layoutX="10.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="57.0" layoutY="101.0" prefHeight="76.0" prefWidth="185.0" styleClass="frame" stylesheets="@detail.css">
-                           <children>
-                              <Text layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tenant">
+                              <Text layoutX="6.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tenant">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Text>
-                              <Text fill="#404040" layoutX="9.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full name">
+                              <Text fill="#404040" layoutX="8.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fullname">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="457.0" layoutY="101.0" prefHeight="76.0" prefWidth="185.0" styleClass="frame" stylesheets="@detail.css">
-                           <children>
-                              <Text layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Host">
+                              <Text layoutX="197.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Text>
-                              <Text fill="#404040" layoutX="9.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full name">
+                              <Text fill="#404040" layoutX="199.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fullname">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="257.0" layoutY="101.0" prefHeight="76.0" prefWidth="185.0" styleClass="frame" stylesheets="@detail.css">
-                           <children>
-                              <Text layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner">
+                              <Text layoutX="420.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Host">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Text>
-                              <Text fill="#404040" layoutX="9.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full name">
+                              <Text fill="#404040" layoutX="422.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fullname">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="57.0" layoutY="192.0" prefHeight="76.0" prefWidth="132.0" styleClass="frame" stylesheets="@detail.css">
-                           <children>
-                              <Text layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start date">
+                              <Text layoutX="7.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start date">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Text>
-                              <Text fill="#404040" layoutX="9.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dd/mm/yyyy">
+                              <Text fill="#404040" layoutX="9.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dd/mm/yyyy">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="203.0" layoutY="192.0" prefHeight="76.0" prefWidth="132.0" styleClass="frame" stylesheets="@detail.css">
-                           <children>
-                              <Text layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End date">
+                              <Text layoutX="183.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End date">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Text>
-                              <Text fill="#404040" layoutX="9.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dd/mm/yyyy">
+                              <Text fill="#404040" layoutX="185.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="dd/mm/yyyy">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="364.0" layoutY="192.0" prefHeight="76.0" prefWidth="132.0" styleClass="frame" stylesheets="@detail.css">
-                           <children>
-                              <Text layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rental fee">
+                              <Text layoutX="8.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fee">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Text>
-                              <Text fill="#404040" layoutX="9.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$666.00">
+                              <Text fill="#404040" layoutX="10.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$666.00">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="511.0" layoutY="192.0" prefHeight="76.0" prefWidth="132.0" styleClass="frame" stylesheets="@detail.css">
-                           <children>
-                              <Text layoutX="8.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+                              <Text layoutX="184.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Text>
-                              <Text fill="#404040" layoutX="9.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="status">
+                              <Text fill="#404040" layoutX="186.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="status">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Text>
+                              <Button layoutX="420.0" layoutY="297.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="151.0" styleClass="rent" stylesheets="@detail.css" text="Generate Receipt">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Button>
                            </children>
                         </AnchorPane>
                      </children>
